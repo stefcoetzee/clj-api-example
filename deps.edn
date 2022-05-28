@@ -1,0 +1,11 @@
+{:paths   ["src"]
+ 
+ :deps    {ring/ring {:mvn/version "1.9.5"}
+           compojure/compojure {:mvn/version "1.7.0"}}
+ 
+ :aliases {:dev {:exec-fn webdev.core/-dev-main
+                 :exec-args {:port 8000}}
+           
+           :build {:deps {io.github.clojure/tools.build
+                          {:git/tag "v0.8.2" :git/sha "ba1a2bf"}}
+                   :ns-default build}}}
